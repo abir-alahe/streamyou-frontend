@@ -24,7 +24,7 @@ export default function DetailsPage() {
   useEffect(() => {
     const fetchLink = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/link-proxy/${params.id}`)
+        const response = await fetch(`https://streamyou-backend.vercel.app/link-proxy/${params.id}`)
         
         if (!response.ok) {
           throw new Error('Link not found')
