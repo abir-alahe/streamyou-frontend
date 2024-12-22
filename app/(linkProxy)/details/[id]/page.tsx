@@ -125,7 +125,7 @@ export default function DetailsPage() {
 
       <div className="bg-white text-slate-800 shadow rounded-lg p-6">
         <div className="mb-4" onClick={handleLinkClick}>
-          <h2 className="text-lg font-semibold mb-2">Original URL:</h2>
+          <h2 className="text-lg font-semibold mb-2">Video Link:</h2>
           <a
             href={link.url}
             target="_blank"
