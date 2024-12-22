@@ -34,7 +34,7 @@ export default function DetailsPage() {
     const fetchLink = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/link-proxy/${params.id}`
+          `https://streamyou-backend.vercel.app/link-proxy/${params.id}`
         );
 
         if (!response.ok) {

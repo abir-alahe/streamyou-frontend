@@ -15,7 +15,7 @@ export default function GenerateLink() {
     setGeneratedLink('')
 
     try {
-      const response = await fetch('http://localhost:5000/link-proxy/', {
+      const response = await fetch('https://streamyou-backend.vercel.app/link-proxy/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -30,8 +30,8 @@ export default function GenerateLink() {
       const data = await response.json()
       
       // Create the link using the insertedId, using relative path instead
-    //   const generatedUrl = `https://streamyou.site/details/${data.insertedId}`
-      const generatedUrl = `http://localhost:3000/details/${data.insertedId}`;
+      const generatedUrl = `https://streamyou.site/details/${data.insertedId}`
+    //   const generatedUrl = `http://localhost:3000/details/${data.insertedId}`;
       setGeneratedLink(generatedUrl)
     } catch (_err) {
       setError(`${_err}`)
