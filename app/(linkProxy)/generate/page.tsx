@@ -15,13 +15,16 @@ export default function GenerateLink() {
     setGeneratedLink('')
 
     try {
-      const response = await fetch('https://streamyou-backend.vercel.app/link-proxy/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ url }),
-      })
+      const response = await fetch(
+        "https://streamyou-backend.vercel.app/link-proxy/post-link",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ url }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error('Failed to generate link')
