@@ -15,7 +15,7 @@ export default function GenerateLink() {
     setGeneratedLink('')
 
     try {
-      const response = await fetch('https://streamyou-backend.vercel.app/link-proxy/', {
+      const response = await fetch('http://localhost:5000/link-proxy/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
